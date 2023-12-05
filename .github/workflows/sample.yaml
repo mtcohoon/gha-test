@@ -1,0 +1,12 @@
+name: Sample Workflow
+
+on: [ workflow_dispatch, push ]
+
+jobs:
+  s390x_job:
+    name: s390x Image Build
+    runs-on: self-hosted
+    steps:
+      - name: Display system information
+        run: uname -a
+ 
